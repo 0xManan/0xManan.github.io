@@ -1,9 +1,14 @@
 ---
 title: "Analytics [Easy]"
 date: 2024-07-23 02:09:44 +0530
-categories: [Hackthebox]
-tags: [Metabase,CVE-2023-38646,RCE,kernel Privesc]
-image: [/assets/img/Analytics.png](https://github.com/0xManan/0xManan.github.io/blob/main/assets/img/Analytics.png?raw=true)
+categories:
+  - Hackthebox
+tags:
+  - Metabase
+  - CVE-2023-38646
+  - RCE
+  - kernel Privesc
+image: "/assets/img/Analytics.png"
 ---
 
 # Analytics Walkthrough - Easy
