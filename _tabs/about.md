@@ -1,3 +1,5 @@
+layout: page title: About permalink: /about/
+
 # Hey! I'm Manan Patel 👋
 
 I break, secure, and geek out over tech.  
