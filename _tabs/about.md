@@ -3,7 +3,6 @@
 icon: fas fa-info-circle
 order: 4
 ---
-
 # Hey! I'm Manan Patel 👋
 
 I break, secure, and geek out over tech.\
