@@ -1,3 +1,15 @@
+---
+title: "Path Traversal in `run-llama/llama_index`"
+date: 2025-08-17 11:46:44 +0530
+categories:
+  - AI/ML Research
+tags:
+  - AI/ML
+  - CVE-2025-6209
+  - Path Traversal
+  - Open Source Library
+image: "/assets/img/llama.png"
+---
 # When Your AI Library Reads `/etc/passwd` For You
 
 *How I stumbled into a path traversal in `run-llama/llama_index` and got assigned [`CVE-2025-6209`](https://www.cve.org/CVERecord?id=CVE-2025-6209)*
